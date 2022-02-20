@@ -17,14 +17,6 @@ $line=mysqli_fetch_assoc($output);
 if (!empty($_POST['Nimetus'])) {
 $Nimetus = htmlspecialchars(trim($_POST['Nimetus']));
 $Sari = htmlspecialchars(trim($_POST['Sari']));
-$Liikumine = htmlspecialchars(trim($_POST['Liikumine']));
-$Registreerimisnumber = htmlspecialchars(trim($_POST['Registreerimisnumber']));
-$Kuupäev = htmlspecialchars(trim($_POST['Kuupäev']));
-
-$edit="UPDATE dokumendid SET Nimetus='$Nimetus', Sari='$Sari', Liikumine='$Liikumine', Registreerimisnumber='$Registreerimisnumber', Kuupäev='$Kuupäev' WHERE id='$id'";
-$edit_db=mysqli_query($connection, $edit);
-	if($edit_db) {
-	echo "<br> <strong> Kirje on uuendatud </strong>"
     ?>
     <br>
     <br>
