@@ -55,20 +55,7 @@ $Sari = htmlspecialchars(trim($_POST['Sari']));
 <label>Nimetus</label>
 <input type="text" name="Nimetus" value="<?php echo $line['Nimetus'];?>">
 
-</div>
-<br>
-<div>
-<label>Sari</label>
-<input name="Sari" list="Sari" value="<?php echo $line['Sari'];?>">
-<datalist id="Sari">
-    <option value="01 Põhitegevus" />
-    <option value="02 Õppetöö" />
-    <option value="03 Personalitöö" />
-    <option value="04 Majandustegevus" />
-    <option value="05 Asjaajamine" />
-    <option value=" " />
-</datalist> 
-</div>
+
 <br>
 <div>
 <label>Liikumine</label>
