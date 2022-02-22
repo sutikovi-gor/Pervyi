@@ -13,16 +13,6 @@ if (empty($_GET['id'])) {
 $request="SELECT * FROM vara WHERE id='$id'";
 $output=mysqli_query($connection, $request);
 $line=mysqli_fetch_assoc($output);
-}
-//редактировать запрос
-if (!empty($_POST['Nimetus'])) {
-$Nimetus = htmlspecialchars(trim($_POST['Nimetus']));
-$Inventaarinumber = htmlspecialchars(trim($_POST['Inventaarinumber']));
-$Maksumus = htmlspecialchars(trim($_POST['Maksumus']));
-$Vastutav = htmlspecialchars(trim($_POST['Vastutav']));
-$Soetamine = htmlspecialchars(trim($_POST['Soetamine']));
-$Mahaarvutamine = htmlspecialchars(trim($_POST['Mahaarvutamine']));
-$Asukoht = htmlspecialchars(trim($_POST['Asukoht']));
 
 $edit="UPDATE vara SET Nimetus='$Nimetus', Inventaarinumber='$Inventaarinumber', Maksumus='$Maksumus', Vastutav='$Vastutav', Soetamine='$Soetamine', Mahaarvutamine='$Mahaarvutamine', Asukoht='$Asukoht' WHERE id='$id'";
 $edit_db=mysqli_query($connection, $edit);
